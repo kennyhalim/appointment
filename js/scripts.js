@@ -9,9 +9,13 @@ $(document).ready(function(){
     $("#myModal").modal();
   });
 
- $("#myModal").on("hidden.bs.modal", function (){ 
-    location.reload();
-  });
+  // $("#btnClose").click(function(){
+  //   location.reload();
+  // });
+
+  $("#myModal").on("hidden.bs.modal", function (){
+     location.reload();
+   });
 
   $('#date').val(new Date().toDateInputValue());
 
