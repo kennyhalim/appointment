@@ -9,7 +9,7 @@ $(document).ready(function(){
     $("#myModal").modal();
   });
 
-  $("#btnClose").click(function(){
+ $("#myModal").on("hidden.bs.modal", function (){ 
     location.reload();
   });
 
