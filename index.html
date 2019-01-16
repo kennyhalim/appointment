@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Appointment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Fill in the following information to make an appointment</h1>
+
+        <form id="formOne">
+          <div class="form-group">
+            <label for="first-name">Your first name</label>
+            <input id="first-name" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Your last name</label>
+            <input id="last-name" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="description">Describe your problem</label>
+            <input id="description" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date">
+          </div>
+          <div class="form-group">
+            <label for="start-time">Start time</label><br/>
+            <input type="time" id="start-time" data-format="HH:mm" data-template="HH : mm" value="09:00">
+          </div>
+          <div class="form-group">
+            <label for="end-time">End time</label><br>
+            <input type="time" id="end-time" data-format="HH:mm" data-template="HH : mm" value="10:00">
+          </div>
+
+
+          <button type="submit" class="btn btn-info btn-lg" id="myBtn">Open Modal</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Booking Succesful!</h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                  Here is your booking details: <br>
+                  <span class="date"></span> from <span class="start-time"></span>
+                  to <span class="end-time"></span>.
+                </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" id="btnClose" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </form>
+
+
+</div>
+
+</body>
+</html>
